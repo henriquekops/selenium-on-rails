@@ -1,34 +1,34 @@
 class NotesController < ApplicationController
 
     def index
-        @notes = Notes.all
+        @note = Note.all
     end
 
     def show
-        @notes = Notes.find(params[:id])
+        @note = Note.find(params[:id])
     end
 
     def new
-        @notes = Notes.new
+        @note = Note.new
     end
 
     def edit
-        @notes = Notes.find(params[:id])
+        @note = Note.find(params[:id])
     end
 
     def create
-        @notes = Notes.new(notes_params)
-        if @notes.save
-            redirect_to @notes
+        @note = Note.new(notes_params)
+        if @note.save
+            redirect_to @note
         else
             render 'new'
         end
     end
 
     def update
-        @notes = Notes.find(params[:id])
+        @note = Note.find(params[:id])
        
-        if @notes.update(notes_params)
+        if @note.update(notes_params)
           redirect_to @note
         else
           render 'edit'
@@ -36,8 +36,8 @@ class NotesController < ApplicationController
     end
 
     def destroy
-        @notes = Notes.find(params[:id])
-        @notes.destroy
+        @note = Note.find(params[:id])
+        @note.destroy
         redirect_to notes_path
     end
 
