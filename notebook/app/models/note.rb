@@ -6,7 +6,7 @@ class Note < ApplicationRecord
     private 
     def contains_only_letters
         if :title[/[a-z]+/] != :title
-            errors.add(:title, "cannot contains digits!")
+            errors.add(:title, "cannot contains digits or special characters!")
         end
     end
 end
