@@ -5,8 +5,8 @@ class Note < ApplicationRecord
 
     private 
     def contains_only_letters
-        if !:title.match(/^[[:alpha:][:blank:]]+$/)
-            errors.add(:title, "cannot contains digits or special characters!")
+        if title[/[a-zA-Z\s]+/] != title
+            errors.add(:title, "must contain only letters.")
         end
     end
 end
