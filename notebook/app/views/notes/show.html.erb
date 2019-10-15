@@ -1,16 +1,17 @@
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
- 
-<p>
-  <strong>Body:</strong>
-  <%= @note.body %>
-</p>
 
-<%= link_to 'Edit', edit_note_path(@note) %>
-<%= link_to 'Delete', note_path(@note),
-  method: :delete,
-  data: { confirm: 'Are you sure?' } 
-%>
-<%= link_to 'Back', notes_path %>
+<h1><%= @note.title %></h1>
+
+<div>
+  <p>
+    <%= @note.body %>
+  </p>
+
+  <button><%= link_to 'Edit', edit_note_path(@note) %></button>
+  
+  <button><%= link_to 'Delete', note_path(@note),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } 
+  %></button>
+
+  <button><%= link_to 'Back', notes_path %></button>
+</div>

@@ -1,16 +1,15 @@
 <h1>Your notes</h1>
  
-<table>
-  <tr>
-    <th></th>
-  </tr>
- 
-  <% @note.each do |note| %>
-    <tr>
-      <td><%= note.title %></td>
-      <td><%= link_to 'Show', note_path(note) %></td>
-    </tr>
-  <% end %>
-</table>
+<div>
+  <table align='center'>
 
-<%= link_to 'New', new_note_path(@note)%>
+    <% @note.each do |note| %>
+      <tr>
+        <td id='idx_title'><%= note.title %></td>
+        <td><button><%= link_to 'Show', note_path(note) %></button></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <button><%= link_to 'New', new_note_path(@note)%></button>
+</div>
