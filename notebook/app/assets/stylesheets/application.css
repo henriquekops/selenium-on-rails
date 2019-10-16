@@ -14,6 +14,12 @@
  *= require_self
  */
 
+body {
+    margin: 0;
+    background-color: #FAFAFA;
+    font-family: 'Roboto', sans-serif;
+}
+
  #error_explanation {
     width: 300px;
     border: 2px solid red;
@@ -66,13 +72,11 @@ li {
     padding:5%
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
 .field_with_errors textarea, .field_with_errors input{
-    border: 1px solid #c00
+    border: 1px solid #c00;
+    border-radius: 5px;
+    height: 25px;
+    width: 200px;
 }
 
 div {
@@ -85,7 +89,7 @@ p {
     font-size: 12pt;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 10px
+    /* padding-bottom: 10px */
 }
 
 td {
@@ -93,8 +97,8 @@ td {
 }
 
 button {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center
+    
+
 }
 
 a {
@@ -109,5 +113,31 @@ a:hover {
 #idx_title {
     font-size: 12pt;
     font-family: monospace
+}
 
+#header {
+    height: 80px; 
+    background: #6A1B9A;
+    color: #FAFAFA;
+    margin: 0px 0px 20px 0px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.input-fields > input, textarea {
+    border-radius: 5px !important;
+    border: 1px solid #6A1B9A;
+    height: 25px !important;
+    width: 200px !important;
+}
+
+.button {
+    text-align: center;
+    padding: 16px;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    border: 1px solid #6A1B9A;
+    height: 20px;
+    margin: 0;
 }

@@ -1,10 +1,8 @@
 
-<h1><%= @note.title %></h1>
+<div id='header'><h1><%= @note.title %></h1></div>
 
 <div>
-  <p>
-    <%= @note.body %>
-  </p>
+  <p> <%= @note.body %> </p>
 
   <button><%= link_to 'Edit', edit_note_path(@note) %></button>
   
