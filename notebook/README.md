@@ -1,1 +1,0 @@
-# Selenium on Rails
